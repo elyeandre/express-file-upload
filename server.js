@@ -15,6 +15,11 @@ const initRoutes = require("./src/routes");
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
 
+app.get('/', (req, res) => {
+  res.json('Hello World')
+});
+
+
 let port = 8080;
 app.listen(port, () => {
   console.log(`Running at localhost:${port}`);
